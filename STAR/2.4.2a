@@ -1,0 +1,4 @@
+#%Module 1.0
+module-whatis "Sets up STAR 2.4.2a"
+
+prepend-path PATH /data/ngs/usr/local/src/STAR-STAR_2.4.2a/bin/Linux_x86_64/

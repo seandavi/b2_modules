@@ -1,0 +1,53 @@
+#%Module 1.0
+#
+#  R module for use with 'environment-modules' package on helix:
+# 
+
+module-whatis "Sets up R 3.0.0 on helix/biowulf cluster"
+module load zlib/1.2.8
+module load bzip2/1.0.6
+
+# Define LD_LIBRARY_PATH
+prepend-path LD_LIBRARY_PATH /usr/lib
+prepend-path LD_LIBRARY_PATH /usr/lib64
+# prepend-path LD_LIBRARY_PATH /data/CCRBioinfo/biowulf/local/R-3.0.0/lib
+prepend-path LD_LIBRARY_PATH /usr/local/GSL/1.15/lib
+prepend-path LD_LIBRARY_PATH /usr/local/ROOT/lib/root
+prepend-path LD_LIBRARY_PATH /usr/local/graphviz/lib64
+prepend-path LD_LIBRARY_PATH /usr/local/netcdf/4.1.2/lib
+
+# Define PATH
+prepend-path PATH /usr/local/netcdf/4.1.2/bin
+prepend-path PATH /usr/local/GSL/1.15/bin
+prepend-path PATH /usr/local/ROOT/bin
+prepend-path PATH /usr/local/graphviz/bin
+
+# Define environment variables
+setenv PERL /usr/local/perl-5.8.9/bin/perl
+setenv GSL_INC /usr/local/GSL/1.15/include/gsl
+# setenv R_HOME /data/CCRBioinfo/biowulf/local/R-3.0.0/
+
+if { [file exists "/bin/uname"] } {
+  set hostname [exec /bin/uname -n]
+  if { $hostname == "helix.nih.gov" }  {
+    prepend-path LD_LIBRARY_PATH /usr/local/ATLAS/current/intel_X5550
+    setenv JAGS_INCLUDE /local/JAGS-3.2.0/include/JAGS
+    setenv JAGS_LIB /local/lib64
+    setenv JAGS_MODULES /local/lib64/JAGS/modules-3
+    # Set aliases for R
+    set-alias "R" "/data/ngs/usr/local/R-3.2.1/bin/R"
+    set-alias "Rscript" "/data/ngs/usr/local/R-devel/bin/Rscript"
+ } else {
+       prepend-path LD_LIBRARY_PATH /usr/local/ATLAS/current/default
+       prepend-path LD_LIBRARY_PATH /usr/local/openmpi/lib
+       prepend-path PATH /usr/local/openmpi/bin
+       setenv JAGS_INCLUDE /usr/local/JAGS-3.2.0/include/JAGS
+       setenv JAGS_LIB /usr/local/lib64
+       setenv JAGS_MODULES /usr/local/lib64/JAGS/modules-3
+       set-alias "R" "/data/ngs/usr/local/R-3.2.1/bin/R"
+       set-alias "Rscript" "/data/ngs/usr/local/R-devel/bin/Rscript"
+      }
+  }
+
+
+

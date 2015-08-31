@@ -1,0 +1,7 @@
+#%Module 1.0
+module-whatis "Sets up staden io lib and scripts v2.0.0b9"
+
+prepend-path LD_LIBRARY_PATH /data/ngs/usr/local/src/staden-2.0.0b9.i686/lib
+prepend-path PATH /data/ngs/usr/local/src/staden-2.0.0b9.i686/bin
+
+

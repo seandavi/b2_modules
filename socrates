@@ -1,0 +1,8 @@
+#%Module 1.0
+module-whatis "Sets up the Socrates split-read somatic variant finder"
+
+module load python/2.7.6
+module load bowtie
+prepend-path PATH /data/ngs/usr/local/socrates
+
+

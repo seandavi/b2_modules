@@ -1,0 +1,5 @@
+#%Module 1.0
+module-whatis "Adds SERPENTINE_HOME environment variable and sets up snakemake 3.1.1 and changes python to v3.3.2"
+
+module load snakemake
+setenv SERPENTINE_HOME "/data/ngs/usr/local/serpentine"

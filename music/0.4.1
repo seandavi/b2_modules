@@ -1,0 +1,8 @@
+#%Module 1.0
+module-whatis "Sets up Genome MUSIC software, version 0.4.1"
+setenv SAMDIR /usr/local/apps/samtools/0.1.12a
+append-path PERL_LOCAL_LIB_ROOT /data/ngs/usr/local/perl/perl5
+setenv PERL_MB_OPT "--install_base /data/ngs/usr/local/perl/perl5"
+setenv PERL_MM_OPT "INSTALL_BASE=/data/ngs/usr/local/perl/perl5";
+prepend-path PERL5LIB /data/ngs/usr/local/perl/perl5/lib/perl5/x86_64-linux-thread-multi:/data/ngs/usr/local/perl/perl5/lib/perl5
+prepend-path PATH /data/ngs/usr/local/perl/perl5/bin

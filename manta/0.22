@@ -1,0 +1,5 @@
+#%Module 1.0
+#
+module-whatis "Sets up manta sv caller, version 0.22"
+
+prepend-path PATH /data/ngs/usr/local/manta-0.22/bin

@@ -1,0 +1,5 @@
+#%Module 1.0
+module-whatis "Sets up snap 1.0beta.10"
+
+module load gcc/4.8.3
+prepend-path PATH /data/ngs/usr/local/src/snap

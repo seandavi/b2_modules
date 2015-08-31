@@ -1,0 +1,5 @@
+#%Module 1.0
+module-whatis "Sets up STAR 2.4.1a"
+
+module load gcc/4.8.3
+prepend-path PATH /data/ngs/usr/local/STAR_2.4.1a/

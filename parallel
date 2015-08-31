@@ -1,0 +1,6 @@
+#%Module 1.0
+module-whatis "Sets up gnu parallel"
+prepend-path PATH /data/ngs/usr/local/parallel/bin
+
+
+

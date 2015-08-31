@@ -1,0 +1,5 @@
+#%Module 1.0
+module-whatis "Sets up rf-ace random forest software"
+module load gcc/4.7.0
+prepend-path PATH /data/ngs/usr/local/src/rf-ace/bin
+

@@ -1,0 +1,5 @@
+#%Module 1.0
+module-whatis "Sets up irods icommands"
+
+prepend-path PATH /gs1/users/ngs/usr/local/src/iRODS/clients/icommands/bin
+

@@ -1,0 +1,6 @@
+#%Module 1.0
+module-whatis "Set up PyLOH installed under anaconda"
+module load anaconda
+
+
+

@@ -1,0 +1,6 @@
+#%Module 1.0
+module-whatis "Sets up SVseq2"
+
+prepend-path PATH /data/ngs/usr/local/svseq2
+set-alias SVseq2 SVseq2_2
+

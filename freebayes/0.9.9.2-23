@@ -1,0 +1,7 @@
+#%Module 1.0
+#
+
+module-whatis "Sets up freebayes 0.9.9.2-23"
+
+prepend-path  PATH	    /data/ngs/usr/local/src/freebayes/bin
+prepend-path  PATH	    /usr/local/apps/ogap/current
